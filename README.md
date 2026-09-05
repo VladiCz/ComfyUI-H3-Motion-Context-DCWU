@@ -1,4 +1,4 @@
-# H3 Motion Context + Deferred Context Window Upscale
+# H3 Motion Context + Deferred Context Window Upscale - experimental WIP
 
 Chain MiniMax H3 clips so motion and sound keep going across the cut. 
 Upscale with the same model the concatenated long AV latent using RAM/VRAM efficient context window. 
