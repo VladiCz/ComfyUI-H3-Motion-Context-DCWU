@@ -1,6 +1,7 @@
-# H3 Motion Context
+# H3 Motion Context + Deferred Context Window Upscale
 
-Chain MiniMax H3 clips so motion and sound keep going across the cut.
+Chain MiniMax H3 clips so motion and sound keep going across the cut. 
+Upscale with the same model the concatenated long AV latent using RAM/VRAM efficient context window. 
 
 Generate clip A. Feed its last frames and audio into this node. Generate
 clip B. B picks up where A left off: same motion, same speed, same
