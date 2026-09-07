@@ -8,6 +8,26 @@ rejected any keyframe anchor other than the first or last frame. That
 landed in ComfyUI 0.34.0. Every release through 0.33.4 has the older
 layout. Each entry below says which of the two it works with.
 
+## 0.6.2 - 2026-09-06
+
+Requires ComfyUI 0.34.0 or newer. Use 0.3.1 on anything older.
+
+- Chain `segments` treats a blank value as 0. Graphs saved when the
+  button row was the only widget stored `""` there; after `segments` was
+  added that empty string failed INT validation.
+- Example workflow: both Chain nodes (fl2va and ref2va) now store
+  `segments` 0 instead of that leftover blank.
+
+## 0.6.1 - 2026-09-05
+
+Requires ComfyUI 0.34.0 or newer. Use 0.3.1 on anything older.
+
+- The mock harness no longer uses `importlib.import_module` (that YARA
+  hit flagged 0.5.x/0.6.0). `tests/` still ships, including the smoke
+  test, seam probe, freeze detect, and level step.
+- Clear latents and slot-exists POST routes require Origin to match Host
+  (CSRF). Latent paths must stay inside ComfyUI's output folder.
+
 ## 0.6.0 - 2026-09-03
 
 Requires ComfyUI 0.34.0 or newer. Use 0.3.1 on anything older.
